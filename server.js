@@ -14,6 +14,12 @@ app.get('/login', (req, res) => {
 app.get('/register', (req, res) => {
   res.render('register');
 });
+app.get('/ownerdashboard',(req,res) =>{
+  res.render('ownerdashboard');
+});
+app.get('/sitterdashboard',(req,res) =>{
+  res.render('sitterdashboard');
+});
 
 // Set the port
 const PORT = 3000;

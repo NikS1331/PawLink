@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+        <title>Owner Dashboard</title>
+        <style>
+            body{
+                font-family:Arial,sans-serif;
+                background:linear-gradient(to bottom right,#81e6d9,#34d399);
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                min-height:100vh;
+                margin:0;
+            }
+        .dashboard{
+            background:white;
+            padding:2rem;
+            border-radius:1rem;
+            box-shadow:0 4px 15px rgba(0,0,0,0.2);
+            width:700px;
+            display:grid;
+            grid-template-columns: 1fr 1fr;
+            gap:1.5rem;
+            }
+            h2{
+                grid-column:1/span 2;
+                text-align:center;
+                color:#0d9488;
+                margin-top:0;
+            }
+        .section{
+            background: #f9fafb;
+            border-radius:0.75rem;
+            padding:1rem;
+            box-shadow:inset 0 0 5px rgba(0,0,0,0.05);
+        }
+        .section h3{
+            margin-top:0;
+            color:#047857;
+        }
+        button{
+            background: color #10b981;
+            color:white;
+            border:none;
+            border-radius: 0.5rem;
+            padding: 0.5rem 1rem;
+            cursor:pointer;
+            font-weight:bold;
+            margin-top:0.5rem;
+        }
+        button:hover{
+            background-color:#059669;
+        }
+        .logout-btn{
+            background-color: #14b8a6;
+            grid-column:1/span 2;
+            justify-self:center;
+            padding:0.6rem 1.2rem;
+        }
+        .pet-info img{
+            width:80px;
+            height:80px;
+            border-radius:50%;
+            object-fit:cover;
+        }
+        .messages{
+            display:flex;
+            flex-direction:column;
+            gap:0.5rem;
+        }
+        .msg-box{
+            background:#ecfdf5;
+            border-radius:0.5rem;
+            padding:0.5rem;
+            border:1px solid #d1fae5;
+        }
+        .send-area input{
+            flex:1;
+            padding:0.4rem;
+            border:1px solid #ccc;
+            border-radius:0.5rem;
+        }
+
+        </style>
+    </head>
+    <body>
+        <div class="dashboad">
+            <h2>Welcome,Henry</h2>
+        <div class="section pet-info">
+            <h3>Your Pet</h3>
+            <img src="https://place-puppy.com/80x80"alt="Pet photo">
+            <p><strong>Name:</strong>Max</p>
+            <p><strong>Breed:</strong>Labrador Retriever</p>
+            <p><strong>Age:</strong>5 years</p>
+            <p><strong>Notes:</strong>Grain-free diet.
+            Takes medication for allergies.</p>
+            <button>Edit</button>
+        </div>
+
+        <div class="section bookings">
+            <h3>Next Booking</h3>
+            <p><strong>Date:</strong>April 26</p>
+            <p><strong>Time:</strong>2:00 PM</p>
+            <p><strong>Sitter:</strong>___</p>
+            <button>Book a Sitter</button>
+        </div>
+
+        <div class="section messages">
+            <h3>Messages</h3>
+            <div class="msg-box">I'm available for the booking.</div>
+            <div class="msg-box">Sounds good.</div>
+            <div class="msg-box">I'm almost there.</div>
+            <div class="msg-box">OK</div>
+            <div class="send-area">
+                <input type="text" placeholder="Send message..."/>
+                <button>Send</button>
+            </div>
+        </div>
+
+        <button class="logout-btn">Logout</button>
+        </div>
+    </body>
+</html>
