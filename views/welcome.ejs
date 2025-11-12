@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+        <title>Welcome to Pet Sitting Service</title>
+            <style>
+                body{
+                    font-family:Arial,sans-serif;
+                    background:linear-gradient(to bottom right,#81e6d9,#34d399);
+                    display:flex;
+                    justify-content:center;
+                    align-items:center;
+                    height: 100vh;
+                    margin:0;
+                }
+                .welcome-card{
+                    background:white;
+                    padding:2.5rem;
+                    border-radius: 1rem;
+                    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+                    width:400px;
+                    text-align:center;
+                }
+                
+                h1{
+                    color:#0f766e;
+                    margin-bottom:1rem;
+                }
+                p{
+                    color:#333;
+                    margin-bottom:1.5rem;
+                }
+                button{
+                    background-color:#059669;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="welcome-card">
+
+                <h1>Welcome to Pawlink!</h1>
+                <p>
+                    We connect loving pet sitters with caring pet owners.<br>
+                    Whether you're looking for a trusted sitter or want to care
+                    for pets in your community, we make it simple and secure
+                </p>
+                <button onclick="goToRegister()">Go to Register</button>
+            </div>
+            <script>
+                function goToRegister(){
+                    window.location.href="/register";
+                }
+            </script>
+        </body>
+</html>

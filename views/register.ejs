@@ -84,5 +84,36 @@
                 }
             }
         </script>
+        <script>
+            function handleRegister(role){
+                  const name=document.getElementById('name').value;
+                  const email=document.getElementById('email').value;
+                  const password=document.getElementById('password').value;
+                  
+                  if(!name||!email||!password){
+                    alert('Please enter name,email,and password.');
+                    return;
+                  }
+                  fetch('/register',{
+                   method:'POST',
+                   headers:{'Content-Type':'application/json'},
+                   body: JSON.stringify({name,email,password,role}) 
+                  })
+                  .then(res => res.json())
+                  .then(data=> {
+                    if(data.success){
+                        alert('Account created successfully!');
+                        if(role==='sitter') window.loation.href='/sitterdashboard';
+                        else window.location.href='/ownerdashboard';
+                    }else{
+                        alert('Error:'+data.message);
+                    }
+                  })
+                  .catch(err=> {
+                    console.error(err);
+                    alert('Something went wrong.');
+                  })
+            }
+        </script>
     </body>
 </html>
